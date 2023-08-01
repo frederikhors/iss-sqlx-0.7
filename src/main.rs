@@ -149,17 +149,6 @@ fn query_teams<'a>(
 
         let mut store = store.unwrap_or_default();
 
-        // let teams = vec![
-        //     Team {
-        //         id: "1".to_string(),
-        //         name: "One".to_string(),
-        //     },
-        //     Team {
-        //         id: "2".to_string(),
-        //         name: "Two".to_string(),
-        //     },
-        // ];
-
         let mut query = sqlx::QueryBuilder::new(r#"SELECT "teams".*" FROM "teams"#);
 
         let teams = query
